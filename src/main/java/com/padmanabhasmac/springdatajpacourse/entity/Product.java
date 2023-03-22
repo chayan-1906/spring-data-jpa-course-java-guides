@@ -1,10 +1,7 @@
 package com.padmanabhasmac.springdatajpacourse.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
@@ -16,6 +13,7 @@ import java.time.LocalDateTime;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString
 @Table(name = "products", schema = "ecommerce", uniqueConstraints = {
 		@UniqueConstraint(name = "sku_unique", columnNames = "stock_keeping_unit")
 })
