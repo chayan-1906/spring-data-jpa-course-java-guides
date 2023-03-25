@@ -105,4 +105,24 @@ class IProductRepositoryTest {
 		productRepository.delete ( productToBeDeleted );
 		System.out.println ( productToBeDeleted.getName ( ) + " product with id " + productIdToBeDeleted + " has been deleted successfully" );
 	}
+
+	@Test
+	void deleteAllMethod() {
+		productRepository.deleteAll ( );
+//		Product product1 = productRepository.findById ( 5L ).get ( );
+//		Product product2 = productRepository.findById ( 6L ).get ( );
+//		productRepository.deleteAll ( List.of ( product1, product2 ) );
+	}
+
+	@Test
+	void countMethod() {
+		long count = productRepository.count ( );
+		System.out.println ( count );
+	}
+
+	@Test
+	void existsByIdMethod() {
+		boolean exists = productRepository.existsById ( 11L );
+		System.out.println ( exists );
+	}
 }
